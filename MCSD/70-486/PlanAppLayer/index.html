@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Exam Certfication questions and answers for Microsoft 70-486 and 70-483"/>
+    <title>Plan Application Layer</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=o_LD1zwBWIgplYoPccOJIEoGFsHu-ekCZc2X7WgTUKo1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+<a href="/MCSD/70-486">Skills Measured</a> >> <a href="/MCSD/70-486/DesignAppArch">Design Application Architecture</a> >>
+<h3>Plan Application Layer</h3>
+
+
+
+<h4>Data access options</h4>
+After you determine your data requirements—existing data, new data, or a combination—
+consider how you need to access the data. The two primary options are:
+<ul>
+    <li>
+        object relational mapper (O/RM)  - an application or system
+        that aids in the conversion of data within a relational database management system
+        (RDBMS) and the object model that is necessary for use within object-oriented programming.
+        The O/RM hydrates the object with the data from the database, or creates
+        the SQL statements that will save the object data into the database. Entity Framework, and Linq-to-SQL are examples of O/RM.
+        </li><li>
+        Writing your own component to manage interactions with the
+        database Writing your own component implies you will need to manage any
+        conversions to and from your object model. This approach might be preferred when
+        you are working with a data model that does not closely model your object model, or
+        you are using a database format that is not purely relational, such as NoSQL.
+    </li>
+</ul>
+<h4>Design approaches</h4>
+Entity Framework supports the Model First, Code First, and Database First design approaches.
+Model First and Code First each offer a different way to link objects and a database.
+An architect uses the Model First approach when designing the database and the object
+model at the same time with Entity Designer in Microsoft Visual Studio. This was one of the
+most-requested features after the initial release of Entity Framework because new projects
+tend to need new database schemas.
+
+SoC - Separation of concern is a software development concept that separates a computer
+program into different sections, or concerns, in which each concern has a different purpose.
+By separating these sections, each can encapsulate information that can be developed and
+updated independently. N-tier development is an example of SoC in which the user interface
+(UI) is separated from both the business layer and the data access layer.
+
+<div class="defn">
+    <strong>Model</strong> - represents the table and data structure<br /><br />
+
+    <strong>View</strong> - responsible for displaying information to users. It’s the only part of the application that users see.<br /><br />
+
+    <strong>Controllers</strong> - handles incoming requests, handles user input and interaction, and executes application logic. A controller connector to the model and view. Controller is the gateway.
+</div>
+
+
+
+<div class="defn">
+    <h4>Repository Pattern</h4>
+    The Repository pattern is a design pattern that where the code to uses objects without knowing how the objects details. The deatils of the object, including mapping from tables to objects, is contained in the repository class.<br />
+    <a href="http://www.remondo.net/repository-pattern-example-csharp/" target="_blank">Repository Pattern Example</a>
+
+
+</div>
+
+<p class="SampleQ">
+    <a href="/MCSD/70-486/56">Sample Question 56</a> | <a href="/MCSD/70-486/57">Sample Question 57</a> | <a href="/MCSD/70-486/58">Sample Question 58</a> | <a href="/MCSD/70-486/59">Sample Question 59</a> | <a href="/MCSD/70-486/1">Case Study Exam Question 1</a> | <a href="/MCSD/70-486/42">Case Study Question 42</a> | <a href="/MCSD/70-486/47">Case Study Question 47</a> | <a href="/MCSD/70-486/48">Case Study Question 48</a>  | <a href="/MCSD/70-486/142">Exam Question 142</a>
+</p>
+
+
+        <hr />
+
+        <footer>
+            <p>&copy; 2023 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

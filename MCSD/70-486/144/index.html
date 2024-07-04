@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=1oV9fjr7KrKUw1iINElhQJuwleVnAJKfutVUetyEuK81" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                    <a class="navbar-brand" href="/">Exam Ref</a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+
+            <a href="143" style="position:fixed; left:100px;margin-top:5px"><i class="fa fa-arrow-left"></i>Previous Question</a>
+        <h4 style="display:inline; position:fixed; left:45%">Question 144</h4>
+        <a href="145" style="position:fixed;right:100px; margin-top:5px;">Next Question<i class="fa fa-arrow-right"></i></a>
+
+
+
+<br />
+<br />
+<section id="UserQuestion">
+
+
+
+
+<button onclick="hideCaseStudy('CaseStudy')" style="display:none" class="btn btn-danger" id="btnHideCaseStudy"><i class="fa fa-ban"></i>Hide Case Study</button>
+<button onclick="showCaseStudy('CaseStudy')" style="display:block" class="btn btn-info" id="btnShowCaseStudy"><i class="fa fa-eye"></i>Show Case Study - Video Transcoding Service</button>
+<section id="CaseStudy">
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#Background" aria-controls="home" role="tab" data-toggle="tab">Background</a></li>
+            <li role="presentation"><a href="#BusReq" aria-controls="profile" role="tab" data-toggle="tab">Business Requirements</a></li>
+            <li role="presentation"><a href="#Tech" aria-controls="messages" role="tab" data-toggle="tab">Technical Requirements</a></li>
+            <li role="presentation"><a href="#AppStruct" aria-controls="settings" role="tab" data-toggle="tab">Application Structure</a></li>
+            <li role="presentation"><a href="#All" aria-controls="settings" role="tab" data-toggle="tab">All</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Background">
+                You are developing a video transcoding service. This service is used by customers to upload video files, convert video to other formats, and view the converted files. This service is used by customers all over the world.
+            </div>
+            <div role="tabpanel" class="tab-pane" id="BusReq">
+                <ul>
+                    <li>
+                        The user-facing portion of the application is an ASP.NET MVC application.
+                    </li>
+                    <li>
+                        It provides an interface for administrators to upload video and schedule transcoding.
+                    </li>
+                    <li>
+                        It also enables administrators and users to download the transcoded videos.
+                    </li>
+                    <li>
+                        When videos are uploaded, they are populated with metadata used to identify the video.
+                    </li>
+                    <li>
+                        The video metadata is gathered by only one system when the video upload is complete.
+                    </li>
+                    <li>
+                        Customers require support for Microsoft Internet Explorer 7 and later.
+                    </li>
+                    <li>
+                        The application contains a header that is visible on every page.
+                    </li>
+                    <li>
+                        If the logged-on user is an administrator, then the header will contain links to administrative functions. This information is read from a cookie that is set on the server.
+                    </li><li>
+The administrative links must not be present if an error condition is present.</li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Tech">
+                <h6>User Experience:</h6>
+<ul><li>        The front-end web application enables a user to view a list of videos.</li>
+<li>
+    The main view of the application is the web page that displays the list of videos.
+</li><li>
+        HTML elements other than the list of videos are changed with every request requiring the page to reload.</li></ul>
+
+<h6>    Compatibility:</h6><ul>
+<li>Some customers use browsers that do not support the HTTP DELETE verb.</li><li>
+These browsers send a POST request with an HTTP header of X-Delete when the intended action is to delete.</li>
+  </ul>
+<h6>Transcoding:</h6>
+                <ul>
+                    <li>
+                        The video transcoding occurs on a set of Windows Azure worker roles.
+                    </li>
+                    <li>
+                        The transcoding is performed by a third-party command line tool named transcode.exe. When the tool is installed, an Environment variable named transcode contains the path to the utility.
+                    </li>
+                    <li>
+                        A variable named license contains the license key. The license for the transcoding utility requires that it be unregistered when it is not in use.
+
+                    </li>
+                    <li>
+                        The transcoding utility requires a significant amount of resources. A maximum of 10 instances of the utility can be running at any one time. If an instance of the role cannot process an additional video, it must not prevent any other roles from processing that video.
+                    </li>
+
+                    <li>
+                        The utility logs errors to a Logs directory under the utilities path.
+                    </li><li>
+A local Azure directory resource named perf is used to capture performance data.</li>
+                </ul>
+
+<h6>    Development:</h6>
+            <ul>
+                <li>Developers must use Microsoft Remote Desktop Protocol (RDP) to view errors generated by the transcode.exe utility.</li>
+                <li>
+                    An x509 certificate has been created and distributed to the developers for this purpose.
+                </li><li>
+Developers must be able to use only RDP and not any other administrative functions.</li>
+            </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="AppStruct">
+<h6>Application Struction</h6>
+                <a href="#Transcode">TranscodeWorkerRole.cs</a> | <a href="#Thumbnail">ThumbnailGenerator.cs</a> | <a href="#VideoCntlr">VideoController.cs</a> | <a href="#DeleteHandler">DeleteHandler.cs</a> | <a href="#VideoAdminAtt">VidoeAdminAttrbutes.cs</a> | <a href="#AdminVerifierFact">AdminVerifierFactory.cs</a> | <a href="#ImageConverter">ImageConverter.cs</a>
+
+                <figure>
+                    <figcaption id="Transcode">TranscodeWorkerRole.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/TranscodeWorkRolecs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="Thumbnail">ThumbnailGenerator.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/ThumbnailGeneratorcs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="VideoCntlr">VideoController.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/VideoControllercs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="DeleteHandler">DeleteHandler.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/DeleteHandlercs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="VideoAdminAtt">VideoAdminAttribute.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/VideoAdminAttributecs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="AdminVerifierFact">AdminVerifierFactory.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/AdminVerifierFactorycs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="ImageConverter">ImageConverter.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/ImageConvertercs.png" />
+                </figure>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="All">
+                <h4>Background</h4>
+                You are developing a video transcoding service. This service is used by customers to upload video files, convert video to other formats, and view the converted files. This service is used by customers all over the world.
+                <h4>Business Requirements</h4>
+                <ul>
+                    <li>
+                        The user-facing portion of the application is an ASP.NET MVC application.
+                    </li>
+                    <li>
+                        It provides an interface for administrators to upload video and schedule transcoding.
+                    </li>
+                    <li>
+                        It also enables administrators and users to download the transcoded videos.
+                    </li>
+                    <li>
+                        When videos are uploaded, they are populated with metadata used to identify the video.
+                    </li>
+                    <li>
+                        The video metadata is gathered by only one system when the video upload is complete.
+                    </li>
+                    <li>
+                        Customers require support for Microsoft Internet Explorer 7 and later.
+                    </li>
+                    <li>
+                        The application contains a header that is visible on every page.
+                    </li>
+                    <li>
+                        If the logged-on user is an administrator, then the header will contain links to administrative functions. This information is read from a cookie that is set on the server.
+                    </li>
+                    <li>
+                        The administrative links must not be present if an error condition is present.
+                    </li>
+                </ul>
+                <h4>Technical Requirements</h4>
+                <h6>User Experience:</h6>
+                <ul>
+                    <li>        The front-end web application enables a user to view a list of videos.</li>
+                    <li>
+                        The main view of the application is the web page that displays the list of videos.
+                    </li>
+                    <li>
+                        HTML elements other than the list of videos are changed with every request requiring the page to reload.
+                    </li>
+                </ul>
+
+                <h6>    Compatibility:</h6><ul>
+                    <li>Some customers use browsers that do not support the HTTP DELETE verb.</li>
+                    <li>
+                        These browsers send a POST request with an HTTP header of X-Delete when the intended action is to delete.
+                    </li>
+                </ul>
+                <h6>Transcoding:</h6>
+                <ul>
+                    <li>
+                        The video transcoding occurs on a set of Windows Azure worker roles.
+                    </li>
+                    <li>
+                        The transcoding is performed by a third-party command line tool named transcode.exe. When the tool is installed, an Environment variable named transcode contains the path to the utility.
+                    </li>
+                    <li>
+                        A variable named license contains the license key. The license for the transcoding utility requires that it be unregistered when it is not in use.
+
+                    </li>
+                    <li>
+                        The transcoding utility requires a significant amount of resources. A maximum of 10 instances of the utility can be running at any one time. If an instance of the role cannot process an additional video, it must not prevent any other roles from processing that video.
+                    </li>
+
+                    <li>
+                        The utility logs errors to a Logs directory under the utilities path.
+                    </li>
+                    <li>
+                        A local Azure directory resource named perf is used to capture performance data.
+                    </li>
+                </ul>
+
+                <h6>    Development:</h6>
+                <ul>
+                    <li>Developers must use Microsoft Remote Desktop Protocol (RDP) to view errors generated by the transcode.exe utility.</li>
+                    <li>
+                        An x509 certificate has been created and distributed to the developers for this purpose.
+                    </li>
+                    <li>
+                        Developers must be able to use only RDP and not any other administrative functions.
+                    </li>
+                </ul>
+                <h6>Application Struction</h6>
+                <a href="#Transcode">TranscodeWorkerRole.cs</a> | <a href="#Thumbnail">ThumbnailGenerator.cs</a> | <a href="#VideoCntlr">VideoController.cs</a> | <a href="#DeleteHandler">DeleteHandler.cs</a> | <a href="#VideoAdminAtt">VidoeAdminAttrbutes.cs</a> | <a href="#VideoVerifierFact">VideoVerifierFactory.cs</a> | <a href="#ImageConverter">ImageConverter.cs</a>
+
+                <figure>
+                    <figcaption id="Transcode">TranscodeWorkerRole.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/TranscodeWorkRolecs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="Thumbnail">ThumbnailGenerator.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/ThumbnailGeneratorcs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="VideoCntlr">VideoController.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/VideoControllercs.png" />
+
+                </figure>
+                <figure>
+                    <figcaption id="DeleteHandler">DeleteHandler.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/DeleteHandlercs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="VideoAdminAtt">VideoAdminAttribute.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/VideoAdminAttributecs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="VideoVerifierfact">VideoVerifierFactory.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/AdminVerifierFactorycs.png" />
+                </figure>
+                <figure>
+                    <figcaption id="ImageConverter">ImageConverter.cs</figcaption>
+                    <img src="/Content/images/CaseStudyVideo/ImageConvertercs.png" />
+                </figure>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <h4 class="SLT" id="QuestionType">Skills Measured 2.1 Exam Question</h4>
+
+    <p class="Question">You need to maximize performance of video delivery. Which code segment should you use as the body of the GetVideoStream function in the VideoController class?</p>
+    <div class="code">
+        ul#nav {
+        <div class="indent">
+            font-size: 1.3em<br />
+            font-wieth: 600;
+        </div>
+        }<br /><br />
+        ul#nav li {<div class="indent">
+                       <span>
+                           <select>
+                               <option>float: left;</option>
+                               <option>background-color: #ffd80;</option>
+                               <option>background-color: #2da4c2;</option>
+                               <option>text-decoration: none;</option>
+                           </select>
+                       </span>
+        <br />
+                       <span>
+                           <select>
+                               <option>text-decoration:none;</option>
+                               <option>list-style: none;</option>
+                               <option>border-radius: 15px;</option>
+                               <option>word-wrap: break-word;</option>
+
+                           </select>
+                       </span><br />
+        text-align: center;
+        </div>}<br /><br />
+        ul#nav li a {<div class="indent">
+                         <span>
+                             <select>
+                                 <option>background-clip: border-box;</option>
+                                 <option>background: #2da4c2;</option>
+                                 <option>border-radius: 15px;</option>
+                                 <option>word-wrap:break-word;</option>
+                             </select>
+                         </span><br />
+        color: #FFF;<br />
+                         <span>
+                             <select>
+                                 <option>background-clip: padding-box</option>
+                                 <option>text-docoration: none;</option>
+                                 <option>background-color: #ffd800;</option>
+                                 <option>float: left;</option>
+                             </select>
+                         </span><br />
+        border-radius: 12px 12px 0 0;<br />
+        margin: 0 4px 0 4px;
+        </div>}
+        <br /><br />
+        ul#nav li a:hover {<div class="indent">
+        color: #333<br />
+                               <span>
+                                   <select>
+                                       <option>float: left</option>
+                                       <option>background-color: #ffd800;</option>
+                                       <option>background-color:#2da4c2;</option>
+                                       <option>list-style: none;</option>
+                                   </select>
+                               </span><br />
+                               <span>
+                                   <select>
+                                       <option>cursor: pointer;</option>
+                                       <option>background-clip: border-box;</option>
+                                       <option>text-decoration: none;</option>
+                                       <option>background-origin: border-box;</option>
+                                   </select>
+                               </span>
+        </div>}
+    </div>
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer"><div class="code">
+    ul#nav {
+    <div class="indent">
+        font-size: 1.3em<br />
+        font-wieth: 600;
+    </div>
+    }<br /><br />
+    ul#nav li {<div class="indent">
+        <select>
+            <option selected>float: left;</option>
+            <option>background-color: #ffd80;</option>
+            <option>background-color: #2da4c2;</option>
+            <option>text-decoration: none;</option>
+        </select>
+        <br />
+        <select>
+            <option>text-decoration:none;</option>
+            <option selected>list-style: none;</option>
+            <option>border-radius: 15px;</option>
+            <option>word-wrap: break-word;</option>
+
+        </select><br />
+        text-align: center;
+    </div>}<br /><br />
+    ul#nav li a {<div class="indent">
+        <select>
+            <option>background-clip: border-box;</option>
+            <option selected>background: #2da4c2;</option>
+            <option>border-radius: 15px;</option>
+            <option>word-wrap:break-word;</option>
+        </select><br />
+        color: #FFF;<br />
+        <select>
+            <option>background-clip: padding-box</option>
+            <option selected>text-docoration: none;</option>
+            <option>background-color: #ffd800;</option>
+            <option>float: left;</option>
+        </select><br />
+        border-radius: 12px 12px 0 0;<br />
+        margin: 0 4px 0 4px;
+    </div>}
+    <br /><br />
+    ul#nav li a:hover {<div class="indent">
+        color: #333<br />
+        <select>
+            <option>float: left</option>
+            <option selected>background-color: #ffd800;</option>
+            <option>background-color:#2da4c2;</option>
+            <option>list-style: none;</option>
+        </select><br />
+        <select>
+            <option>cursor: pointer;</option>
+            <option>background-clip: border-box;</option>
+            <option selected>text-decoration: none;</option>
+            <option>background-origin: border-box;</option>
+        </select>
+    </div>}
+</div></div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2017 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

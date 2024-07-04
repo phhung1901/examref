@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=1oV9fjr7KrKUw1iINElhQJuwleVnAJKfutVUetyEuK81" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                    <a class="navbar-brand" href="/">Exam Ref</a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+
+            <a href="70" style="position:fixed; left:100px;margin-top:5px"><i class="fa fa-arrow-left"></i>Previous Question</a>
+        <h4 style="display:inline; position:fixed; left:45%">Question 71</h4>
+        <a href="72" style="position:fixed;right:100px; margin-top:5px;">Next Question<i class="fa fa-arrow-right"></i></a>
+
+
+
+<br />
+<br />
+<section id="UserQuestion">
+
+
+
+
+
+<article>
+    <h4>1.5.3 Question</h4>
+    <div class="MS" id="QuestionType">Multiple Choices</div>
+    <p class="Question">
+        You are adding a reporting vertical to an enterprise application. Many of the reports will be run every morning by a set of users. Some of the reports will be identical as every member of a team will get the same report sometime in the morning. What kind of caching will provide an improvement in performance? (Choose all that apply.)</p>
+    <ul class="code"><li>
+    <input type="checkbox" name="rb" value="A" />A. <span>Data caching</span>
+
+</li><li>
+    <input type="checkbox" name="rb" value="B" />B. <span>Page output caching with a duration of two minutes</span>
+
+</li><li>
+    <input type="checkbox" name="rb" value="C" />C. <span>Page output caching with a duration of four hours</span>
+
+</li><li>
+    <input type="checkbox" name="rb" value="D" />D. <span>Windows AppFabric caching</span>
+
+</li>
+    </ul>
+    </article>
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">ACD</div><div id="Explanation"><h5>Explanation</h5>
+                             A. Correct: Data caching with the appropriate timeout will enable the data needed for the reports to be stored so that the call to the database is not necessary.<br />
+                             B. Incorrect: Although a page output caching would be useful, the short time frame of two minutes means that the cache will likely expire before the next user requests the page.<br />
+                             C. Correct: A page output caching of four hours caches the output of the report for the whole morning and should eliminate the need for the report to be run a second time.<br />
+                             D. Correct: AppFabric caching acts much like data caching to eliminate the need for additional calls to the database to generate the reports. <br />
+                            <p style="margin-top:10px">
+
+                                <div class="defn">
+    <strong>Data Caching:</strong> A form of caching that can occur at the server side using the new .NET 4 Caching Framework. The default implementation uses the ObjectCache and MemoryCache objects that are within the System.Runtime.Caching assembly. When you create your cache, you can set an expiration period just as in output caching. This cache is used by all users on the server. Generally, you create a CacheProvider class that implements the ICacheProvider interface, used as an intermediate layer between the business layer and the data access layer.
+</div>
+                                <br /><br />
+                                <div class="defn">
+    <strong>Page Output Caching</strong>
+    <div class="code">
+        [OutputCache(Duration=120, VaryByParam="Name", Location="ServerAndClient")]
+        Public ActionResult Index()
+        {
+        <div class="indent">Return View(modelData);</div>
+        }
+    </div>
+
+    This code sets the response headers so the browser will know to go to its local cache for the next 120 seconds. The Duration setting represents the time, in seconds, that the page output should be cached. Due to the Location setting in the attribute, any other browser call going to this URL will also get this same server-cached output.<br />
+    <a href="https://msdn.microsoft.com/en-us/library/system.web.mvc.outputcacheattribute_properties(v=vs.118).aspx" target="_blank">OutputCacheAttribute</a>
+</div>
+                                <br /><br />
+                                <div class="defn">
+    <strong>Background: </strong>
+    Web farm, or where sessions occur over many servers, each server would have to rerun the page to add it to their local cache.<br />
+
+    <strong>Distrbuted Caching: </strong>create data on one application server and share it with the other servers<br />
+    <strong>Windows Server AppFabric: </strong> Provides a set of extensions to Windows Server to enables developers to create faster, more scalable, and more manageable applications.
+</div>
+                            </p>
+                            </div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2017 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

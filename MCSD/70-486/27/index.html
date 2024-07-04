@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MCSD 70-486 Practise Exam</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=1oV9fjr7KrKUw1iINElhQJuwleVnAJKfutVUetyEuK81" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                    <a class="navbar-brand" href="/">Exam Ref</a>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+
+            <a href="26" style="position:fixed; left:100px;margin-top:5px"><i class="fa fa-arrow-left"></i>Previous Question</a>
+        <h4 style="display:inline; position:fixed; left:45%">Question 27</h4>
+        <a href="28" style="position:fixed;right:100px; margin-top:5px;">Next Question<i class="fa fa-arrow-right"></i></a>
+
+
+
+<br />
+<br />
+<section id="UserQuestion">
+
+
+
+
+<a href="/MCSD/70-486">70-486 Skills Measured</a> >> <a href="/MCSD/70-486/DesignUserExp">2.5 Plan an adaptive UI layout</a> >>
+<article>
+
+    <p class="MC" id="QuestionType">
+        <h4>Question</h4>
+        You are developing an ASP.NET MVC web application for viewing a photo album. The application is designed for devices that support changes in orientation, such as tablets and smartphones.<br /><br />
+
+        The application displays a grid of photos in portrait mode. When the orientation changes to landscape, each tile in the grid expands to include a description. The HTML that creates the gallery interface resembles the following markup.<br /><br />
+
+        The CSS used to style the tiles in landscape mode is as follows.<br />
+        <div class="code">
+            &lt;ul> class="gallery">
+            <div class="indent">
+                &li><br />
+                &img src="...">
+                &lt;div>Descript&lt;/div><br />
+                &lt;/li><br />
+            </div>
+            &lt;/ul>
+        </div>
+        The CSS used to style the tiles in portrait mode is as follows:<br />
+        <div class="code">
+            ul.gallery > li {<br />
+            <div class="indent">width:100px;</div>
+            }<br /><br />
+            ul.gallery > li > div <br />
+            <div class="indent">display:none;</div>
+            }
+        </div>
+        If this CSS is omitted, the existing CSS displays the tiles in landscape mode. You need to update the portrait mode CSS to apply only to screens with a width less than 500 pixels.<br /><br />
+
+        Which code segment should you use?
+    </p>
+    <ul class="code">
+        <li>
+            <input type="radio" name="rb" value="A" />A. @media resolution(max-width: 500px) { . . . }
+        </li>
+        <li>
+            <input type="radio" name="rb" value="B" />B. @media screen(min-width: 0px, max-width: 500px) { . . . }
+        </li>
+        <li>
+            <input type="radio" name="rb" value="C" />C. @media screen and (width <= 500px) { . . . }
+        </li>
+        <li>
+            <input type="radio" name="rb" value="D" />D. @media screen and (max-width: 500px) { . . . }
+        </li>
+    </ul>
+</article>
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">D</div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2017 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

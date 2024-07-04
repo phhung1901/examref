@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=Sr2ol4eSqs18OWRhAUdUnVUw8ia6DRwOHIWnIRNrVKA1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-sm-4">
+                <a href="8" ><i class="fa fa-arrow-left"></i>Previous Question</a>
+        </div>
+        <div class="col-sm-4">
+            <h4>Question 9</h4>
+        </div>
+        <div class="col-sm-4">
+            <a href="10" >Next Question<i class="fa fa-arrow-right"></i></a>
+        </div>
+</div>
+
+
+<br />
+<section id="UserQuestion">
+
+
+
+
+<a href="/MCSD/70-486">70-486 Skills Measured</a> >> <a href="/MCSD/70-486/DesignUserExp">2.3 Design and Implement UI Behaviour</a> >>
+<button onclick="hideCaseStudy('CaseStudy')" style="display:none" class="btn btn-danger" id="btnHideCaseStudy"><i class="fa fa-ban"></i>Hide Case Study</button>
+<button onclick="showCaseStudy('CaseStudy')" style="display:block" class="btn btn-info" id="btnShowCaseStudy"><i class="fa fa-eye"></i>Show Case Study - Olympic Marathon Runners</button>
+<section id="CaseStudy">
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#Background" aria-controls="home" role="tab" data-toggle="tab">Background</a></li>
+            <li role="presentation"><a href="#BusReq" aria-controls="profile" role="tab" data-toggle="tab">Business Requirements</a></li>
+            <li role="presentation"><a href="#Tech" aria-controls="messages" role="tab" data-toggle="tab">Technical Requirements</a></li>
+            <li role="presentation"><a href="#AppStruct" aria-controls="settings" role="tab" data-toggle="tab">Application Structure</a></li>
+            <li role="presentation"><a href="#All" aria-controls="settings" role="tab" data-toggle="tab">All</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Background">
+                You are developing an ASP.NET MVC application in Visual Studio 2012 that will be used by Olympic marathon runners to log data about training runs.
+            </div>
+            <div role="tabpanel" class="tab-pane" id="BusReq">
+                <ul>
+                    <li>The application stores date, distance, and duration information about a user's training runs.</li>
+                    <li>The user can view, insert, edit, and delete records.</li>
+                    <li>The application must be optimized for accessibility.</li>
+                    <li>All times must be displayed in the user's local time.</li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Tech"><h6>Data Access:</h6>
+        Database access is handled by a public class named RunnerLog.DataAccess.RunnerLogDb.<br />
+        All data retrieval must be done by HTTP GET and all data updates must be done by HTTP POST.
+<h6>Layout:</h6>
+        All pages in the application use a master layout file named \Views\Shared\_Layout.cshtml.
+<h6>Models:</h6>
+        The application uses the \Models\LogModel.cs model.
+<h6>Views:</h6>
+        All views in the application use the Razor view engine.<br />
+        Four views located in \Views\RunLog are named:
+<ul>
+    <li>_CalculatePace.cshtml</li>
+    <li>EditLog.cshtml</li>
+    <li>GetLog.cshtml</li>
+    <li>InsertLog.cshtml</li>
+</ul>
+        The application also contains a \Views\Home\Index.cshtml view.<br />
+<h6>Controllers:</h6>
+        The application contains a \Controllers\RunLogController.cs controller.
+<h6>Images:</h6>
+        A stopwatch.png image is located in the \Images folder.
+<h6>Videos:</h6>
+        A map of a runner's path is available when a user views a run log. The map is implemented as an Adobe Flash application and video. The browser should display the video natively if possible, using H264, Ogg, or WebM formats, in that order. If the video cannot be displayed, then the Flash application should be used.
+<h6>Security:</h6>
+        You have the following security requirements:
+<ul>
+    <li>The application is configured to use forms authentication.</li>
+    <li>Users must be logged on to insert runner data.</li>
+    <li>Users must be members of the Admin role to edit or delete runner data.</li>
+    <li>There are no security requirements for viewing runner data.</li>
+    <li>You need to protect the application against cross-site request forgery.</li>
+    <li>Passwords are hashed by using the SHA1 algorithm.</li>
+</ul>
+            RunnerLog.Providers.RunLogRoleProvider.cs contains a custom role provider.<br />
+        Relevant portions of the application files follow. (Line numbers are included for reference only.)</div>
+            <div role="tabpanel" class="tab-pane" id="AppStruct">
+                <img src="/Content/images/CaseStudy1/RunLogControllercs.png" />
+                <img src="/Content/images/CaseStudy1/LogModelscs.png" />
+                <img src="/Content/images/CaseStudy1/CalculatePace.png" />
+                <img src="/Content/images/CaseStudy1/EditLog.png" />
+                <img src="/Content/images/CaseStudy1/GetLog.png" />
+                <img src="/Content/images/CaseStudy1/InsertLog.png" />
+                <img src="/Content/images/CaseStudy1/Layout.png" />
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="All">
+                <h4>Background</h4>
+                You are developing an ASP.NET MVC application in Visual Studio 2012 that will be used by Olympic marathon runners to log data about training runs.
+                <h4>Business Requirements</h4>
+                <ul>
+                    <li>The application stores date, distance, and duration information about a user's training runs.</li>
+                    <li>The user can view, insert, edit, and delete records.</li>
+                    <li>The application must be optimized for accessibility.</li>
+                    <li>All times must be displayed in the user's local time.</li>
+                </ul>
+                <h4>Technical Requirements</h4>
+                <h6>Data Access:</h6>
+                Database access is handled by a public class named RunnerLog.DataAccess.RunnerLogDb.<br />
+                All data retrieval must be done by HTTP GET and all data updates must be done by HTTP POST.
+                <h6>Layout:</h6>
+                All pages in the application use a master layout file named \Views\Shared\_Layout.cshtml.
+                <h6>Models:</h6>
+                The application uses the \Models\LogModel.cs model.
+                <h6>Views:</h6>
+                All views in the application use the Razor view engine.<br />
+                Four views located in \Views\RunLog are named:
+                <ul>
+                    <li>_CalculatePace.cshtml</li>
+                    <li>EditLog.cshtml</li>
+                    <li>GetLog.cshtml</li>
+                    <li>InsertLog.cshtml</li>
+                </ul>
+                The application also contains a \Views\Home\Index.cshtml view.<br />
+                <h6>Controllers:</h6>
+                The application contains a \Controllers\RunLogController.cs controller.
+                <h6>Images:</h6>
+                A stopwatch.png image is located in the \Images folder.
+                <h6>Videos:</h6>
+                A map of a runner's path is available when a user views a run log. The map is implemented as an Adobe Flash application and video. The browser should display the video natively if possible, using H264, Ogg, or WebM formats, in that order. If the video cannot be displayed, then the Flash application should be used.
+                <h6>Security:</h6>
+                You have the following security requirements:
+                <ul>
+                    <li>The application is configured to use forms authentication.</li>
+                    <li>Users must be logged on to insert runner data.</li>
+                    <li>Users must be members of the Admin role to edit or delete runner data.</li>
+                    <li>There are no security requirements for viewing runner data.</li>
+                    <li>You need to protect the application against cross-site request forgery.</li>
+                    <li>Passwords are hashed by using the SHA1 algorithm.</li>
+                </ul>
+                RunnerLog.Providers.RunLogRoleProvider.cs contains a custom role provider.<br />
+                Relevant portions of the application files follow. (Line numbers are included for reference only.)<br />
+                <figure>
+                    <h4>Application Structure</h4>
+
+                    <img src="/Content/images/CaseStudy1/RunLogControllercs.png" />
+                    <img src="/Content/images/CaseStudy1/LogModelscs.png" />
+                    <img src="/Content/images/CaseStudy1/CalculatePace.png" />
+                    <img src="/Content/images/CaseStudy1/EditLog.png" />
+                    <img src="/Content/images/CaseStudy1/GetLog.png" />
+                    <img src="/Content/images/CaseStudy1/InsertLog.png" />
+                    <img src="/Content/images/CaseStudy1/Layout.png" />
+                </figure>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<article>
+    <h4>Question</h4>
+    <div class="MC" id="QuestionType">Multiple Choice</div>
+    <p class="Question">You need to make all of the rows in the table bold in the Views/RunLog/GetLog.cshtml view. Which code segment should you use?</p>
+    <ul class="code"><li>
+    <input type="radio" name="rb" value="A" /><span>A. table > th:last-child { font-weight: bold; }</span>
+</li><li>
+    <input type="radio" name="rb" value="B" /><span>B. table + first-child { font-weight: bold; }</span>
+</li><li>
+    <input type="radio" name="rb" value="C" /><span>C. table > tr > th:nth-child{2) { font-weight: bold; }</span>
+</li><li>
+    <input type="radio" name="rb" value="D" /><span>D. table > tr { font-weight: bold; }</span>
+</li>
+    </ul>
+    </article>
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">D</div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2017 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

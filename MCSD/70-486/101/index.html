@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Exam Certfication questions and answers for Microsoft 70-486 and 70-483"/>
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=o_LD1zwBWIgplYoPccOJIEoGFsHu-ekCZc2X7WgTUKo1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-sm-4">
+                <a href="100" ><i class="fa fa-arrow-left"></i>Previous Question</a>
+        </div>
+        <div class="col-sm-4">
+            <h4>Question 101</h4>
+        </div>
+        <div class="col-sm-4">
+            <a href="102" >Next Question<i class="fa fa-arrow-right"></i></a>
+        </div>
+</div>
+
+
+<br />
+<section id="UserQuestion">
+
+
+
+
+
+<article>
+    <h4>3.3.3 Question</h4>
+    <div class="MC" id="QuestionType">Multiple Choice</div>
+    <p class="Question">
+        You have been tasked with modernizing an application created in ASP 3.0. Part of one of the pages contains HTML that comes as a string from a third-party application as part of a service call that populates part of a form. The same form contains input values for your application.<br /><br />
+
+        You need to support the same business process as the original application, but you also want to use some MVC features. What is the approach?</p>
+    <ul class="code"><li>
+    <input type="radio" name="rb" value="A" />A. <span>Create a single model containing information from your local application. Use strongly-typed binding as much as possible and manually match the rest of the fields.</span>
+
+</li><li>
+    <input type="radio" name="rb" value="B" />B. <span>Create a single model for the local input fields and the service call input, and use ToValueProvider to map the entire object.</span>
+</li><li>
+    <input type="radio" name="rb" value="C" />C. <span>Create a single model. Use weakly-typed binding for the form fields, and the HTML provided by the third-party application.</span>
+
+</li><li>
+    <input type="radio" name="rb" value="D" />D. <span>Create a model that contains only your fields and strongly bind the fields to the model. Create a second model that maps to the fields in the imported HTML and bind to that model using ToValueProvider.</span>
+</li>
+
+    </ul>
+    </article>
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">D</div><div id="Explanation"><h5>Explanation</h5>
+                           A. Incorrect: Although this could conceivably work, it has the misfortune of expect­ing manual mapping. It also uses the approach of a single model, and because the provided HTML input forms might change under you, it makes more sense to use two models so that the information your application controls is not affected.<br />
+                           B. Incorrect: Although this would work, it uses the single model approach. Because the provided HTML input forms can change outside of your own release cycle, it makes more sense to use two models so that the information your application controls is not affected.<br />
+                           C. Incorrect: You cannot weakly bind to the input fields provided from the third party because weakly-bound models imply that you have used an HTML helper to write the information, and you are just giving the helper a hint to the property it should map to in the model.<br />
+                           D. Correct: The key is separating your data input fields from the provided input fields. You can strongly-bind to yours because you have full control over the rela­tionship between your model and your view, and can then use the ToValueProvider to merge the other model that is tied to the provided input fields.<br />
+                            </div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2020 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Exam Certfication questions and answers for Microsoft 70-486 and 70-483"/>
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=o_LD1zwBWIgplYoPccOJIEoGFsHu-ekCZc2X7WgTUKo1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-sm-4">
+                <a href="58" ><i class="fa fa-arrow-left"></i>Previous Question</a>
+        </div>
+        <div class="col-sm-4">
+            <h4>Question 59</h4>
+        </div>
+        <div class="col-sm-4">
+            <a href="60" >Next Question<i class="fa fa-arrow-right"></i></a>
+        </div>
+</div>
+
+
+<br />
+<section id="UserQuestion">
+
+
+
+
+
+<article>
+    <h4>1.1.4 Question</h4>
+    <div class="MC" id="QuestionType">Multiple Choice</div>
+    <p class="Question">
+        You are designing an application that allows employees to change their human resources (HR) information, such as next of kin and direct deposit information. The re­quirements state that the application should talk directly to the HR systems’ database.<br /><br />
+
+        However, at a recent company meeting, the CFO announced that the company will be converting to a new HR system over the next two years. They will take an additional year to move employees to the new system, one department at a time. How will this affect your design?</p>
+    <ul class="code"><li>
+    <input type="radio" name="rb" value="A" />A. <span>It won’t; the requirements state that the application should talk directly to the HR systems’ database.</span>
+
+</li><li>
+    <input type="radio" name="rb" value="B" />B. <span>You should ensure your naming convention for the database as clearly as possible so you can rework your data calls with minimal changes.</span>
+
+</li><li>
+    <input type="radio" name="rb" value="C" />C. <span>You should implement the Repository pattern with the current HR system being the first repository that is built. When the second system comes online, you imple­ment that data access using the same pattern.</span>
+
+</li><li>
+    <input type="radio" name="rb" value="D" />D. <span>You should map the model directly to the database calls, anticipating that you will have to change the model as the new system rolls out.</span>
+
+</li>
+    </ul>
+    </article>
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">C</div><div id="Explanation"><h5>Explanation</h5>
+                           A. Incorrect: It is the designer’s job to ensure that any known enhancements or fu­ture changes are accounted for. Although this approach follows the requirements, it is not the best long-term solution.<br />
+                           B. Incorrect: This solution does not provide the proper level of abstraction; it re­quires either a “one or the other” approach to supporting the HR system, or an approach in which you have to manage which database you are calling from within each data call.<br />
+                           C. Correct: Using the Repository pattern will give you a level of abstraction into the data layer. When you create the second data access component for the new HR system, you can then differentiate on a user or departmental level which imple­mentation to use.<br />
+                           D. Incorrect: This solution does not provide the proper level of abstraction; it re­quires either a “one or the other approach” to supporting the HR system, or an approach in which you have to manage which database you are calling from within each data call.<br />
+    </div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2023 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Design and implement MVC controllers and actions</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=Sr2ol4eSqs18OWRhAUdUnVUw8ia6DRwOHIWnIRNrVKA1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+<a href="/MCSD/70-486">Skills Measured</a> >> <a href="/MCSD/70-486/DevUserExp">3 Develop User Experiencesign Application Architecture</a> >>
+<h2>3.3 Design and implement MVC controllers and actions</h2>
+
+
+<div class="defn">
+    <strong>Apply authorization attributes</strong> - AuthorizeAttribute is another filter designed specifically to enable you to wrap security
+around an action being taken without having to write any code as part of that action. ie. [Authorize(Roles = Admin)], [AllowAnonymous].
+</div>
+
+<div class="defn">
+    <strong>Filters</strong> - Filters are custom classes that provide both a declarative and programmatic means to add pre-action and post-action behavior to controller action methods.The Controller class implements each of the filter interfaces. You can implement any of the filters for a specific controller by overriding the controller's On<filter>
+    method.<br /><br />
+
+    <strong>
+        Authorization filters.
+    </strong> - implement IAuthorizationFilter and make security decisions about whether to execute an action method, such as performing authentication or validating properties of the request. The AuthorizeAttribute class and the RequireHttpsAttribute class are examples of an authorization filter. Authorization filters run before any other filter.<br /><br />
+    <strong>Action filters </strong> - implement IActionFilter and wrap the action method execution. The IActionFilter interface declares two methods: OnActionExecuting and OnActionExecuted. OnActionExecuting runs before the action method. OnActionExecuted runs after the action method and can perform additional processing, such as providing extra data to the action method, inspecting the return value, or canceling execution of the action method. Using this ActionFilters, you can <strong>Implement Action Bahaviours</strong><br /><br />
+    <strong>Result filters</strong> - implement IResultFilter and wrap execution of the ActionResult object. IResultFilter declares two methods: OnResultExecuting and OnResultExecuted. OnResultExecuting runs before the ActionResult object is executed. OnResultExecuted runs after the result and can perform additional processing of the result, such as modifying the HTTP response. The OutputCacheAttribute class is one example of a result filter. Using Results Filter, you can <strong>Implement Action Results</strong><br /><br />
+    <strong>Exception filters</strong> - implement IExceptionFilter and execute if there is an unhandled exception thrown during the execution of the ASP.NET MVC pipeline. Exception filters can be used for tasks such as logging or displaying an error page. The HandleErrorAttribute class is one example of an exception filter.<br /><br />
+    <a href="http://www.asp.net/mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs" target="_blank">How to implement and integrate customize filters</a><br /><br />
+    <strong>Global Filters</strong> - inherit from the GlobalFilterCollection to filter all actions within the system. Under App_Start->FilterConfig.cs, you can register your global filters.
+
+
+</div>
+
+<div class="defn">
+    <strong>Model Binding</strong> - implement IModelBinding to customize your own binding rules. <a href="https://msdn.microsoft.com/en-us/library/system.web.http.modelbinding.imodelbinder%28v=vs.118%29.aspx" target="_blank">IModelBinding Interface</a>
+</div>
+
+<p class="SampleQ">
+    <a href="/MCSD/70-486/99">Sample Question 99</a> | <a href="/MCSD/70-486/100">Sample Question 100</a> | <a href="/MCSD/70-486/101">Sample Question 101</a> | <a href="/MCSD/70-486/4">Case study Question 4</a> | <a href="/MCSD/70-486/14">Exam Question 14</a> | <a href="/MCSD/70-486/37">Exam Question 37</a> | <a href="/MCSD/70-486/143">Exam Question 143</a> | <a href="/MCSD/70-486/146">Exam Question 146</a> | <a href="/MCSD/70-486/12">Exam Question 12</a>
+</p>
+
+
+
+        <hr />
+
+        <footer>
+            <p>&copy; 2018 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>

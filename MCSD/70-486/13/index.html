@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exam 70-486</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+          <link href="/Content/css?v=Sr2ol4eSqs18OWRhAUdUnVUw8ia6DRwOHIWnIRNrVKA1" rel="stylesheet"/>
+
+          <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+<script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        }({
+            instrumentationKey:"41fede79-c8db-479d-8ba8-0ddca666cd6a"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+
+    </script>
+
+</head>
+<body style="font-family:Arial;font-size:12px; font-style:normal; text-decoration:none;">
+
+    <div class="navbar navbar-inverse " >
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">Exam Ref</a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ex -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3959107971310301"
+                     data-ad-slot="9950238030"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-sm-4">
+                <a href="12" ><i class="fa fa-arrow-left"></i>Previous Question</a>
+        </div>
+        <div class="col-sm-4">
+            <h4>Question 13</h4>
+        </div>
+        <div class="col-sm-4">
+            <a href="14" >Next Question<i class="fa fa-arrow-right"></i></a>
+        </div>
+</div>
+
+
+<br />
+<section id="UserQuestion">
+
+
+
+<a href="/MCSD/70-486">70-486 Skills Measured</a> >> <a href="/MCSD/70-486/DesignAppArch">1.7 Implement synchronous and asynchronous modules and handlers, choose between modules and handlers in IIS</a> >>
+    <p class="Question">
+    <h4>Question</h4>
+    <div id="QuestionType" class="DnD">Drag and Drop</div>
+You are developing an ASP.NET MVC application that takes customer orders. Orders are restricted to customers with IP addresses based in the United States. You need to implement a custom route handler. How should you implement the route handler? (To answer, drag the appropriate line of code to the correct location or locations. Each line of code may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.)</p>
+    <div class="draggablePar" >
+        <section>
+            <ul class="draggable">
+
+                <li id="item1">IHttpHandler</li>
+
+                <li id="item2" >IRouteFactory</li>
+                <li id="item3" >IRouteHandler</li>
+                <li id="item4">IHttpContraint</li>
+                <li id="item5" >RequestContext</li>
+                <li id="item6">ServerContext</li>
+            </ul>
+        </section>
+        <section style="min-width:400px">
+            <div class="UserAnswerDnD code">
+
+                public class USOnlyRouteHandler : <ul style="display:inline-block;min-width:200px; margin-bottom:-5px" id="div4" class="droppable"></ul>
+                <br />
+
+                {
+                <div class="indent">
+                    public <ul style="width:200px; display:inline-block; margin-bottom:-5px" class="droppable" id="div5"></ul> GetHttpHandler( <ul id="div11" style="display:inline-block; width:150px; margin-bottom:-5px;" class="droppable"></ul>requestContext)
+                    {
+                    <div> return new USIPHandler(requestContext) </div>
+
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+</section>
+<button class="btn btn-info pull-right" id="btnShowAnswer" onclick="showAnswer()"> <i class="fa fa-lightbulb-o"></i> Show Answer</button>
+<button class="btn btn-danger pull-right" id="btnHideAnswer" style="display:none" onclick="hideAnswer()"><i class="fa fa-ban"></i> Hide Answer</button>
+
+<article id="artAnswer" >
+    <h4>Answer:</h4>
+
+
+    <div id="RightAnswer">
+<text>
+
+    <div class="draggablePar">
+        <section ondrop="returnDrop(event)" ondragover="allowDrop(event)">
+            <ul class="draggable">
+
+
+
+                <li  id="item3">IRouteFactory</li>
+
+                <li id="item4" >IHttpContraint</li>
+
+                <li id="item6" >ServerContext</li>
+            </ul>
+        </section>
+        <section style="min-width:400px">
+            <div class="RightAnswerDnD code">
+
+
+                  public class USOnlyRouteHandler : <ul style="display:inline-block;margin-bottom:-5px;min-width:200px;" id="div4" class="droppable"><li id="item2">IRouteHandler</li></ul>
+
+
+{<br />
+                <div class="indent">
+                    public <ul style="width:200px; display:inline-block; margin-bottom:-5px" class="droppable" ondrop="drop(event)" id="div5" ondragover="allowDrop(event)"><li id="item1" >IHttpHandler</li></ul> GetHttpHandler(<ul id="div11" style="display:inline-block; margin-bottom:-5px;width:150px" class="droppable" ><li id="item5" >RequestContext</li></ul>requestContext)
+                    {
+                    <div> return new USIPHandler(requestContext) </div>
+
+                    }
+                </div>
+            </div>
+
+        </section>
+    </div>
+</text>
+                </div>
+
+</article>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        <hr />
+
+        <footer>
+            <p>&copy; 2017 - Exam Ref</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <script src="/bundles/app?v=OffipPHacVCnQWtOJ8Zz0-y_CUGWmhozK-hraJ0KARE1"></script>
+
+
+</body>
+</html>
